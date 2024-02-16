@@ -2,15 +2,6 @@ import styled from "styled-components";
 import variaveis from "../../Styles/variaveis";
 import closeIcon from "../../../images/close.png"
 
-export const ProductsList = styled.ul`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-    max-width: 1024px;
-    width: 100%;
-    margin: 56px auto 120px;
-`
-
 export const ProductCard = styled.div`
     width: 320px;
     height: 340px;

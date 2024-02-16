@@ -8,9 +8,10 @@ export const Container = styled.div`
     background-image: url(../../../images/background.png);
 `
 
-export const Titulo = styled.h2`
+export const Titulo = styled.h3`
     margin: 64px auto 40px;
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     height: 84px;
     text-align: center;
     font-weight: 900;
