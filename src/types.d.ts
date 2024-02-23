@@ -1,19 +1,18 @@
 declare type Product = {
-    map(): React.ReactNode
     id: number
-    titulo: string
-    destacado: boolean
-    tipo: string[]
-    avaliacao: number
-    descricao: string
-    capa: string
-    cardapio: {
-        foto: string
-        preco: number
+    title: string
+    highlighted: string
+    type: string
+    note: number
+    description: string
+    cover: string
+    menu: {
+        image: string
+        price: number
         id: number
-        nome: string
-        descricao: string
-        porcao: string
+        name: string
+        info: string
+        portion: string
     }
 }
 

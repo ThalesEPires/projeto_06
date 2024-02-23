@@ -1,24 +1,23 @@
-import { Restaurant } from "../../Pages/Home"
 import Restaurante from "../Restaurantes"
 import * as S from './styles'
 
-export type Props = {
-    menu: Restaurant[]
+type Props = {
+    product: Product[]
 }
 
-const MenuList = ({ menu }: Props) => {
+const MenuList = ({ product }: Props) => {
     return (
         <div className="container">
             <S.MenuList>
-                {menu.map((menu) => (
-                    <li key={menu.id}>
+                {product.map((product) => (
+                    <li key={product.id}>
                         <Restaurante 
-                            id={menu.info.id}
-                            title={menu.info.name}
-                            description={menu.info.description}
-                            image={menu.info.image}
-                            porcao={menu.info.porcao}
-                            preco={menu.info.preco}
+                            id={product.menu.id}
+                            title={product.menu.name}
+                            info={product.menu.info}
+                            image={product.menu.image}
+                            porcao={product.menu.portion}
+                            price={product.menu.price}
                         />
                     </li>
                 ))}

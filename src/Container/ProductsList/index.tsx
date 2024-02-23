@@ -1,22 +1,22 @@
-import { Restaurant } from "../../Pages/Home"
 import Product from "../Product"
 import { ItensList } from "./styles"
 
-
 export type Props = {
-    restaurant: Restaurant[]
+    product: Product[]
 }
 
-const ProductsList = ({ restaurant }: Props) => {
+const ProductsList = ({ product }: Props) => {
     return (
         <div className="container">
             <ItensList>
-                {restaurant.map((product) => (
+                {product.map((product) => (
                     <li key={product.id}>
                         <Product 
                             id={product.id}
                             title={product.title}
+                            highlighted={product.highlighted}
                             description={product.description}
+                            type={product.type}
                             image={product.cover}
                             note={product.note}
                         />

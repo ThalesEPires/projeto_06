@@ -4,15 +4,10 @@ import { useState } from "react"
 import * as S from "./styles"
 
 type Props = {
-    title: string
-    image: string
-    description: string
-    id?: number
-    porcao: string
-    preco: string
+    product: Product
 }
 
-const Restaurante = ({ title, image, description, id, porcao, preco }: Props) => {
+const Restaurante = ({ product }: Props) => {
     const navigate = useNavigate()
 
     const [modalEstaAberto, setModalEstaAberto] = useState(false)
@@ -24,22 +19,22 @@ const Restaurante = ({ title, image, description, id, porcao, preco }: Props) =>
     return (
         <>
             <ul>
-                <S.ProductCard key={id} onClick={() => setModalEstaAberto(true)}>
-                    <img src={image} alt={title}  />
-                    <h5>{title}</h5>
-                    <p>{description}</p>
+                <S.ProductCard key={product.menu.id} onClick={() => setModalEstaAberto(true)}>
+                    <img src={product.menu.image} alt={product.menu.name}  />
+                    <h5>{product.menu.name}</h5>
+                    <p>{product.menu.info}</p>
                     <button type="button" onClick={goToCart}>Adicionar ao carrinho</button>
                 </S.ProductCard> 
             </ul> 
             <S.Modal className={modalEstaAberto ? 'is-visible' : ''}>
                 <S.ModalContent className="container">
-                    <img src={image} alt={title} />
+                    <img src={product.menu.image} alt={product.menu.name} />
                     <button className="close-icon" type="button" onClick={() => setModalEstaAberto(false)}/>
                     <div>
-                        <h4>{title}</h4>
-                        <p>{description}<br /> <br /> <br /></p>
-                        <p>{`Serve: ${porcao}`}</p>
-                        <button type="button" onClick={goToCart}>Adicionar ao carrinho  - {preco}</button>
+                        <h4>{product.menu.name}</h4>
+                        <p>{product.menu.info}<br /> <br /> <br /></p>
+                        <p>{`Serve: ${product.menu.portion}`}</p>
+                        <button type="button" onClick={goToCart}>Adicionar ao carrinho  - {product.menu.price}</button>
                     </div>
                 </S.ModalContent>
                 <div className="overlay" onClick={() => setModalEstaAberto(false)}></div>

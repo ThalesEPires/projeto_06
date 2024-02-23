@@ -3,16 +3,13 @@ import { useNavigate } from "react-router-dom"
 import { Button, Card, Descricao, Image, Notas, Title } from "./styles"
 
 import estrela from "../../../images/estrela.png"
+import Tag from "../Tag"
 
-type Props = {
-    title: string
-    image: string
-    note: string
-    description: string
-    id: number
+export type Props = {
+    product: Product
 }
 
-const Product = ({ title, image, description, note, id }: Props) => {
+const Product = ({ product }: Props) => {
     const navigate = useNavigate()
 
     const goToRestaurant = () => {
@@ -21,20 +18,22 @@ const Product = ({ title, image, description, note, id }: Props) => {
     
     return (
         <Card
-        key={id}
-        title={`Clique aqui para saber mais detalhes do restaurante: ${title}`}
+        key={product.id}
+        title={`Clique aqui para saber mais detalhes do restaurante: ${product.title}`}
         onClick={goToRestaurant}
         >
-            <Image src={image} alt={title} />
+            <Image src={product.cover} alt={product.title} />
+            <Tag>{product.highlighted}</Tag>
+            <Tag>{product.type}</Tag>
             <div>
-                <Title>{title}
+                <Title>{product.title}
                     <Notas>
-                        {note}
+                        {product.note}
                         <img src={estrela} />
                     </Notas>
                 </Title>
             </div>
-            <Descricao>{description}</Descricao>
+            <Descricao>{product.description}</Descricao>
             <Button>Saiba mais</Button>
         </Card>
     )
