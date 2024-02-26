@@ -10,13 +10,13 @@ const MenuList = ({ product }: Props) => {
         <div className="container">
             <S.MenuList>
                 {product.map((product) => (
-                    <li key={product.id}>
+                    <li key={product.menu.itemId}>
                         <Restaurante 
-                            id={product.menu.id}
-                            title={product.menu.name}
+                            itemId={product.menu.itemId}
+                            name={product.menu.name}
                             info={product.menu.info}
                             image={product.menu.image}
-                            porcao={product.menu.portion}
+                            portion={product.menu.portion}
                             price={product.menu.price}
                         />
                     </li>

@@ -9,7 +9,7 @@ declare type Product = {
     menu: {
         image: string
         price: number
-        id: number
+        itemId: number
         name: string
         info: string
         portion: string

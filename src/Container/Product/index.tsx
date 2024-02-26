@@ -5,11 +5,17 @@ import { Button, Card, Descricao, Image, Notas, Title } from "./styles"
 import estrela from "../../../images/estrela.png"
 import Tag from "../Tag"
 
-export type Props = {
-    product: Product
+type Props = {
+    id: number
+    title: string
+    highlighted: string;
+    type: string;
+    note: number;
+    description: string;
+    cover: string;
 }
 
-const Product = ({ product }: Props) => {
+const Product = ({ id, title, highlighted, type, note, description, cover }: Props) => {
     const navigate = useNavigate()
 
     const goToRestaurant = () => {
@@ -18,22 +24,22 @@ const Product = ({ product }: Props) => {
     
     return (
         <Card
-        key={product.id}
-        title={`Clique aqui para saber mais detalhes do restaurante: ${product.title}`}
+        key={id}
+        title={`Clique aqui para saber mais detalhes do restaurante: ${title}`}
         onClick={goToRestaurant}
         >
-            <Image src={product.cover} alt={product.title} />
-            <Tag>{product.highlighted}</Tag>
-            <Tag>{product.type}</Tag>
+            <Image src={cover} alt={title} />
+            <Tag>{highlighted}</Tag>
+            <Tag>{type}</Tag>
             <div>
-                <Title>{product.title}
+                <Title>{title}
                     <Notas>
-                        {product.note}
+                        {note}
                         <img src={estrela} />
                     </Notas>
                 </Title>
             </div>
-            <Descricao>{product.description}</Descricao>
+            <Descricao>{description}</Descricao>
             <Button>Saiba mais</Button>
         </Card>
     )

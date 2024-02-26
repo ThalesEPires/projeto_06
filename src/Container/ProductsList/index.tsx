@@ -17,7 +17,7 @@ const ProductsList = ({ product }: Props) => {
                             highlighted={product.highlighted}
                             description={product.description}
                             type={product.type}
-                            image={product.cover}
+                            cover={product.cover}
                             note={product.note}
                         />
                     </li>
