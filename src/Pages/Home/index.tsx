@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 
 import HomeHeader from "../../Container/HomeHeader"
 import ProductsList from "../../Container/ProductsList"
+import { Api } from "../../types"
 
 
 const Home = () => {
-    const [home, setHome] = useState<Product[]>([])
+    const [home, setHome] = useState<Api[]>([])
 
     useEffect(() => {
         fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')

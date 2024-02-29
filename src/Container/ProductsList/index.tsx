@@ -1,8 +1,9 @@
+import { Api } from "../../types"
 import Product from "../Product"
 import { ItensList } from "./styles"
 
 export type Props = {
-    product: Product[]
+    product: Api[]
 }
 
 const ProductsList = ({ product }: Props) => {
@@ -13,12 +14,12 @@ const ProductsList = ({ product }: Props) => {
                     <li key={product.id}>
                         <Product 
                             id={product.id}
-                            title={product.title}
-                            highlighted={product.highlighted}
-                            description={product.description}
-                            type={product.type}
-                            cover={product.cover}
-                            note={product.note}
+                            title={product.titulo}
+                            highlighted={product.destacado}
+                            description={product.descricao}
+                            type={product.tipo}
+                            cover={product.capa}
+                            note={product.avaliacao}
                         />
                     </li>
                 ))}

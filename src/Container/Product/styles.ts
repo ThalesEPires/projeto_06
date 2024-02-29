@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import variaveis from "../../Styles/variaveis";
 
-export const Card = styled.li`
+export const Card = styled.div`
     width: 474px;
     height: 400px;
     border: 2px solid ${variaveis.rose};
+    position: relative;
 `
 
 export const Image = styled.img`
@@ -35,7 +36,7 @@ export const Descricao = styled.p`
     font-size: 14px;
     font-weight: 400;
     color: ${variaveis.rose};
-    line-height: 22px;
+    line-height: 18px;
     margin: 8px;
 `
 
@@ -48,4 +49,25 @@ export const Button = styled.button`
     color: ${variaveis.branco};
     border: none;
     cursor: pointer;
+`
+
+export const Tag = styled.div`
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    widht: 60px;
+    max-height: 26px;
+    background-color: ${variaveis.rose};
+    color: ${variaveis.branco};
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 10px;
+
+    &.destaque {
+        right: 85px;
+    }
+
+    &.sem-destaque {
+        display: none;
+    }
 `

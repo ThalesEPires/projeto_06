@@ -10,12 +10,11 @@ export const Container = styled.div`
 
 export const Titulo = styled.h3`
     margin: 64px auto 40px;
-    max-width: 540px;
-    width: 100%;
-    height: 84px;
+    width: 540px;
+    max-height: 84px;
     text-align: center;
     font-weight: 900;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 38px;
     color: ${variaveis.rose}
 `
