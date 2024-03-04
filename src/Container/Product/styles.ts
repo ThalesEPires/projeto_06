@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import variaveis from "../../Styles/variaveis";
+import { Link } from "react-router-dom";
 
-export const Card = styled.div`
+export const Card = styled(Link)`
     width: 474px;
     height: 400px;
     border: 2px solid ${variaveis.rose};
     position: relative;
+    text-decoration: none;
+    color: ${variaveis.branco};
+    display: block;
 `
 
 export const Image = styled.img`

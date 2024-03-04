@@ -9,7 +9,7 @@ import Confirmation from "./Pages/Confirmation"
 const Rotas = () => (
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/restaurante" element={<Restaurantes />} />
+        <Route path="/restaurante/:id" element={<Restaurantes />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/entrega" element={<DeliveryAddress />} />
         <Route path="/checkout" element={<Checkout />} />
