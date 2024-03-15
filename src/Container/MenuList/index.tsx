@@ -4,12 +4,11 @@ import * as S from './styles'
 
 export type Props = {
     produto: Api[]
-    id?: string
 }
 
-const MenuList = ({ produto, id }: Props) => {
+const MenuList = ({ produto }: Props) => {
     return (
-        <div id={id} className="container">
+        <div className="container">
             <S.MenuList>
                 {produto.map((produto) => (
                     <li key={produto.id}>

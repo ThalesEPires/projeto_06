@@ -1,32 +1,19 @@
-import { useNavigate, useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 import * as S from "./styles"
-import { Api } from "../../types";
 
 type Props = {
-    foto: string;
-    preco: number;
-    nome: string;
-    descricao: string;
-    porcao: string;
+    id: number
+    foto: string
+    preco: number
+    nome: string
+    descricao: string
+    porcao: string
 }
 
-type ProductParams = {
-    id: string
-}
 
-const Restaurante = ({ foto, preco, nome, descricao, porcao }: Props) => {
-    const { id } = useParams() as ProductParams
-    const [ restaurant, setRestaurant] = useState<Api>()
-
-    useEffect(() => {
-        fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-            .then((res) => res.json())
-            .then((res) => setRestaurant(res))
-    }, [id])
-
-    
+const Restaurante = ({ foto, preco, nome, descricao, porcao, id }: Props) => {
     const navigate = useNavigate()
     
     const [modalEstaAberto, setModalEstaAberto] = useState(false)
@@ -35,9 +22,6 @@ const Restaurante = ({ foto, preco, nome, descricao, porcao }: Props) => {
         navigate('/cart')
     }
     
-    if (!restaurant ) {
-        return <h3>Carregando...</h3>
-    }
     return (
         <>
             <ul>
