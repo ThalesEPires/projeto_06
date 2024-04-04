@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { Overlay } from "../Carrinho/styles"
-import Restaurante from "../Restaurantes"
 import { Button, CartContainer, InputGroup, Row } from "./styles"
+import Restaurantes from "../../Pages/Restaurante"
 
 const Delivery = () => {
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ const Delivery = () => {
     }
     return (
         <>
-            <Restaurante />
+            <Restaurantes />
             <Overlay />
             <CartContainer>
                 <h3>Entrega</h3>

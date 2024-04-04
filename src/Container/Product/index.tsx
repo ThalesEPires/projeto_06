@@ -1,6 +1,6 @@
 import { Button, Card, Descricao, Image, Notas, Tag, Title } from "./styles"
 
-import estrela from "../../../images/estrela.png"
+import estrela from "../../../public/images/estrela.png"
 
 type Props = {
     id: number

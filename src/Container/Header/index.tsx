@@ -1,4 +1,4 @@
-import logo from "../../../images/logo.png"
+import logo from "../../../public/images/logo.png"
 import { HeaderBar, Logo } from "./styles"
 
 const Header = () => {

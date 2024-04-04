@@ -1,11 +1,11 @@
 import { Overlay } from "../../Container/Carrinho/styles"
-import Restaurante from "../../Container/Restaurantes"
+import Restaurantes from "../Restaurante"
 import { Button, CartContainer } from "./styles"
 
 const Confirmation = () => {
     return (
-        <>
-            <Restaurante />
+        <>  
+            <Restaurantes />
             <Overlay />
             <CartContainer>
             <h3>Pedido realizado</h3>

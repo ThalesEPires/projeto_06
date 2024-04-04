@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 import Restaurante from "../../Pages/Restaurante"
-import pizza from "../../../images/pizza1.png"
-import lixeira from "../../../images/lixeira.png"
+import pizza from "../../../public/images/pizza1.png"
+import lixeira from "../../../public/images/lixeira.png"
 import { Img, Overlay, CartItem, Infos, Title, Price, Lixeira, Valor, Value, Button, CartContainer } from "./styles"
 import { useNavigate } from "react-router-dom"
 

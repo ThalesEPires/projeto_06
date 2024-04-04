@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import variaveis from "../../Styles/variaveis";
-import closeIcon from "../../../images/close.png"
+import closeIcon from "../../../public/images/close.png"
 
 export const ProductCard = styled.div`
     width: 320px;

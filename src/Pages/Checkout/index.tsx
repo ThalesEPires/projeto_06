@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { Overlay } from "../../Container/Carrinho/styles"
-import Restaurante from "../../Container/Restaurantes"
 import * as S from "./styles"
+import Restaurantes from "../Restaurante"
 
 const Checkout = () => {
     const navigate = useNavigate()
@@ -16,7 +16,7 @@ const Checkout = () => {
 
     return (
         <>
-            <Restaurante />
+            <Restaurantes />
             <Overlay />
             <S.CartContainer>
             <h3>Pagamento - Valor a pagar R$ 190,90</h3>
