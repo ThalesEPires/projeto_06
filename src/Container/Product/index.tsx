@@ -18,7 +18,7 @@ const Product = ({ id, title, highlighted, type, note, description, cover }: Pro
         <Card
         key={id}
         title={`Clique aqui para saber mais detalhes do restaurante: ${title}`}
-        to={`restaurante/${id}`}
+        to={`/restaurantes/${id}`}
         >
             <Image src={cover} alt={title} />
             <Tag className="destaque">{highlighted === true && 'Destaque do dia'}</Tag>
