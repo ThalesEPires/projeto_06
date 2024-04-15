@@ -13,7 +13,7 @@ const Restaurantes = () => {
     const [menu, setMenu] = useState<Api[]>([])
 
     useEffect(() => {
-        fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+        fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes`)
             .then((res) => res.json())
             .then((res) => setMenu(res))
     }, [id])

@@ -9,7 +9,7 @@ type Props = {
     price: number
     name: string
     description: string
-    portion: string
+    portion: string 
 }
 
 

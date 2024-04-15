@@ -2,7 +2,7 @@ import { Api } from "../../types"
 import Restaurante from "../Restaurantes"
 import * as S from './styles'
 
-type Props = {
+export type Props = {
     produtos: Api[]
 }
 
