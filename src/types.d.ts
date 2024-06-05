@@ -6,13 +6,15 @@ export declare type Api = {
     avaliacao: number
     descricao: string
     capa: string
-    cardapio: {
-        id: number
-        foto: string
-        preco: number
-        nome: string
-        descricao: string
-        porcao: string
-    }
+    cardapio: Cardapio[]
+}
+
+export declare type Cardapio = {
+    id: number
+    foto: string
+    preco: number
+    nome: string
+    descricao: string
+    porcao: string
 }
 

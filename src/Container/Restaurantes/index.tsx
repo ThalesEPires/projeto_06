@@ -40,7 +40,7 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
                         <h4>{name}</h4>
                         <p>{description}<br /> <br /> <br /></p>
                         <p>{`Serve: ${portion}`}</p>
-                        <button type="button" onClick={goToCart}>Adicionar ao carrinho  - {price}</button>
+                        <button type="button" onClick={goToCart}>{`Adicionar ao carrinho  - R$${price}`}</button>
                     </div>
                 </S.ModalContent>
                 <div className="overlay" onClick={() => setModalEstaAberto(false)}></div>

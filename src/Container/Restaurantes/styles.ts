@@ -21,8 +21,9 @@ export const ProductCard = styled.div`
     }
 
     p {
-        width: 304px;
+        width: 300px;
         height: 88px;
+        margin-bottom: 16px;
         font-weight: 400px;
         font-size: 14px;
         color: ${variaveis.bege};
@@ -119,4 +120,4 @@ export const ModalContent = styled.div`
         position: absolute;
         top: 8px;
         right: 8px;
-`
+` 

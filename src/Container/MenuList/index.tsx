@@ -1,9 +1,9 @@
-import { Api } from "../../types"
+import { Cardapio } from "../../types"
 import Restaurante from "../Restaurantes"
 import * as S from './styles'
 
 export type Props = {
-    produtos: Api[]
+    produtos: Cardapio[]
 }
 
 const MenuList = ({ produtos }: Props) => {
@@ -11,14 +11,14 @@ const MenuList = ({ produtos }: Props) => {
         <div className="container">
             <S.MenuList>
                 {produtos.map((produtos) => (
-                    <li key={produtos.cardapio.id}>
+                    <li key={produtos.id}>
                         <Restaurante  
-                            id={produtos.cardapio.id}
-                            name={produtos.cardapio.nome}
-                            description={produtos.cardapio.descricao}
-                            image={produtos.cardapio.foto}
-                            portion={produtos.cardapio.porcao}
-                            price={produtos.cardapio.preco}
+                            id={produtos.id}
+                            name={produtos.nome}
+                            description={produtos.descricao}
+                            image={produtos.foto}
+                            portion={produtos.porcao}
+                            price={produtos.preco}
                         />
                     </li>
                 ))}
