@@ -1,12 +1,18 @@
 import { useState } from "react"
 
 import Restaurante from "../../Pages/Restaurante"
-import pizza from "../../../public/images/pizza1.png"
 import lixeira from "../../../public/images/lixeira.png"
 import { Img, Overlay, CartItem, Infos, Title, Price, Lixeira, Valor, Value, Button, CartContainer } from "./styles"
 import { useNavigate } from "react-router-dom"
 
-const Carrinho = () => {
+type Props = {
+    imagem: string
+    nome: string
+    preco: number
+    id: number
+}
+
+const Carrinho = ({ imagem, nome, preco, id}: Props) => {
     const [cartIsClosed, setCartIsClosed] = useState(false)
     const navigate = useNavigate()
 
@@ -21,27 +27,11 @@ const Carrinho = () => {
                 <Overlay onClick={() => setCartIsClosed(true)}/>
                     <CartContainer className={cartIsClosed ? 'invisible' : ''}>
                         <ul>
-                            <CartItem>
-                                <Img src={pizza} />
+                            <CartItem key={id}>
+                                <Img src={imagem} />
                                 <Infos>
-                                    <Title>Pizza Marguerita</Title>
-                                    <Price>R$ 69,90</Price>
-                                    <Lixeira src={lixeira} />
-                                </Infos>
-                            </CartItem>
-                            <CartItem>
-                                <Img src={pizza} />
-                                <Infos>
-                                    <Title>Pizza Marguerita</Title>
-                                    <Price>R$ 69,90</Price>
-                                    <Lixeira src={lixeira} />
-                                </Infos>
-                            </CartItem>
-                            <CartItem>
-                                <Img src={pizza} />
-                                <Infos>
-                                    <Title>Pizza Marguerita</Title>
-                                    <Price>R$ 69,90</Price>
+                                    <Title>{nome}</Title>
+                                    <Price>{preco}</Price>
                                     <Lixeira src={lixeira} />
                                 </Infos>
                             </CartItem>

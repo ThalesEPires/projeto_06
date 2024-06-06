@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
 import Restaurantes from "./Pages/Restaurante"
-import Cart from "./Pages/Cart"
 import DeliveryAddress from "./Pages/Entrega"
 import Checkout from "./Pages/Checkout"
 import Confirmation from "./Pages/Confirmation"
+import Cart from "./Pages/Cart"
 
 const Rotas = () => (
     <Routes>
