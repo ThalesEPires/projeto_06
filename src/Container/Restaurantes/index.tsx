@@ -29,7 +29,7 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
                     <img src={image} alt={name}  />
                     <h5>{name}</h5>
                     <p>{description}</p>
-                    <button type="button" onClick={goToCart}>Adicionar ao carrinho</button>
+                    <button type="button">Adicionar ao carrinho</button>
                 </S.ProductCard> 
             </ul> 
             <S.Modal className={modalEstaAberto ? 'is-visible' : ''}>
