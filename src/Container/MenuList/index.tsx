@@ -12,7 +12,7 @@ const MenuList = ({ produtos }: Props) => {
             <S.MenuList>
                 {produtos.map((produtos) => (
                     <li key={produtos.id}>
-                        <Restaurante  
+                        <Restaurante
                             id={produtos.id}
                             name={produtos.nome}
                             description={produtos.descricao}

@@ -34,7 +34,7 @@ export const ProductCard = styled.div`
         height: 24px;
         background-color: ${variaveis.bege};
         color: ${variaveis.rose};
-        font-weight: 700px;
+        font-weight: 700;
         font-size: 14px;
         border: none;
         cursor: pointer;

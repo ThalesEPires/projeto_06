@@ -9,7 +9,7 @@ type Props = {
     price: number
     name: string
     description: string
-    portion: string 
+    portion: string
 }
 
 
@@ -21,6 +21,13 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
     const goToCart = () => {
         navigate('/cart')
     }
+
+    const getDescription = (text: string) => {
+        if (text.length > 260) {
+            return text.slice(0, 257) + '...'
+        }
+        return text
+    }
     
     return (
         <>
@@ -28,7 +35,7 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
                 <S.ProductCard key={id} onClick={() => setModalEstaAberto(true)}>
                     <img src={image} alt={name}  />
                     <h5>{name}</h5>
-                    <p>{description}</p>
+                    <p>{getDescription(description)}</p>
                     <button type="button">Adicionar ao carrinho</button>
                 </S.ProductCard> 
             </ul> 

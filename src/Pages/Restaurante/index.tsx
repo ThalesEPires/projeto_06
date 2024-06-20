@@ -3,12 +3,17 @@ import MenuList from "../../Container/MenuList"
 import { useEffect, useState } from "react"
 import {  Cardapio } from "../../types"
 import { useParams } from "react-router-dom"
+import Banner from "../../Container/Banner"
+
+type Props = {
+    capa: string
+}
 
 type ProductParams = {
     id: string
 }
 
-const Restaurantes = () => {
+const Restaurantes = ({ capa }: Props) => {
     const { id } = useParams() as ProductParams
     const [menu, setMenu] = useState<Cardapio[]>([])
 
@@ -20,6 +25,9 @@ const Restaurantes = () => {
     return (
         <>
             <Header />
+            <Banner>
+                    <img src={capa}  />
+            </Banner>
             <MenuList produtos={menu} />
         </>
     )

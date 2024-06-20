@@ -27,5 +27,4 @@ const ProductsList = ({ product }: Props) => {
         </div>
     )
 }
-
 export default ProductsList

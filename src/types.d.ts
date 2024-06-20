@@ -1,7 +1,7 @@
 export declare type Api = {
     id: number
     titulo: string
-    destacado: boolean
+    destacado?: boolean
     tipo: string
     avaliacao: number
     descricao: string

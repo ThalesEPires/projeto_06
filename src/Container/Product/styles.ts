@@ -66,12 +66,16 @@ export const Tag = styled.div`
     font-weight: bold;
     font-size: 12px;
     padding: 6px 10px;
+`
 
-    &.destaque {
-        right: 85px;
-    }
-
-    &.sem-destaque {
-        display: none;
-    }
+export const Destaque = styled.div`
+    position: absolute;
+    top: 16px;
+    right: 86px;
+    widht: 60px;
+    background-color: ${variaveis.rose};
+    color: ${variaveis.branco};
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 10px;
 `
