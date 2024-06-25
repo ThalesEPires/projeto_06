@@ -1,33 +1,35 @@
 import Header from "../../Container/Header"
 import MenuList from "../../Container/MenuList"
 import { useEffect, useState } from "react"
-import {  Cardapio } from "../../types"
+import { Api, Cardapio } from "../../types"
 import { useParams } from "react-router-dom"
-import Banner from "../../Container/Banner"
-
-type Props = {
-    capa: string
-}
+import BannerList from "../../Container/BannerList"
 
 type ProductParams = {
     id: string
 }
 
-const Restaurantes = ({ capa }: Props) => {
+const Restaurantes = () => {
     const { id } = useParams() as ProductParams
     const [menu, setMenu] = useState<Cardapio[]>([])
+    const [capa, setCapa] = useState<Api[]>([])
 
     useEffect(() => {
         fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
             .then((res) => res.json())
             .then((res) => setMenu(res.cardapio))
     }, [id])
+
+    useEffect(() => {
+        fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+            .then((res) => res.json())
+            .then((res) => setCapa(res.cardapio))
+    }, [id])
+
     return (
         <>
             <Header />
-            <Banner>
-                    <img src={capa}  />
-            </Banner>
+            <BannerList banner={capa}/>
             <MenuList produtos={menu} />
         </>
     )

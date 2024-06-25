@@ -20,7 +20,9 @@ const Product = ({ id, title, highlighted, type, note, description, cover }: Pro
         to={`/restaurantes/${id}`}
         >
             <Image src={cover} alt={title} />
-            <Destaque>{highlighted === true && 'Destaque do dia'}</Destaque>
+            {highlighted === true && (
+                <Destaque>{highlighted === true && 'Destaque do dia'}</Destaque>
+            )}
             <Tag>{type}</Tag>
             <div>
                 <Title>{title}
