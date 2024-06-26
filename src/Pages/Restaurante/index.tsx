@@ -21,10 +21,10 @@ const Restaurantes = () => {
     }, [id])
 
     useEffect(() => {
-        fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+        fetch(`https://fake-api-tau.vercel.app/efood/bella_tavola_italiana/capa.jpeg`)
             .then((res) => res.json())
-            .then((res) => setCapa(res.cardapio))
-    }, [id])
+            .then((res) => setCapa(res.capa))
+    }, [capa])
 
     return (
         <>
