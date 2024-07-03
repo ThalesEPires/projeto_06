@@ -1,3 +1,5 @@
+import { BannerCont } from "./styles"
+
 type Props = {
     capa: string
 }
@@ -5,7 +7,7 @@ type Props = {
 const Banner = ({ capa }: Props) => {
     return (
         <div>
-            <img src={capa} alt="" />
+            <BannerCont src={capa} alt="" />
         </div>
     )
 }
