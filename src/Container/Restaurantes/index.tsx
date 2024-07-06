@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 import * as S from "./styles"
+import { ProductList } from "./styles"
 
 type Props = {
     id: number
@@ -31,14 +32,14 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
     
     return (
         <>
-            <ul>
+            <ProductList>
                 <S.ProductCard key={id} onClick={() => setModalEstaAberto(true)}>
                     <img src={image} alt={name}  />
                     <h5>{name}</h5>
                     <p>{getDescription(description)}</p>
                     <button type="button">Adicionar ao carrinho</button>
                 </S.ProductCard> 
-            </ul> 
+            </ProductList> 
             <S.Modal className={modalEstaAberto ? 'is-visible' : ''}>
                 <S.ModalContent className="container">
                     <img src={image} alt={name} />

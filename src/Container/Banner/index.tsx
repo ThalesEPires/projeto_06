@@ -1,14 +1,18 @@
-import { BannerCont } from "./styles"
+import { BannerContainer, BannerImg, Name, Tipo } from "./styles"
 
 type Props = {
     capa: string
+    type: string
+    name: string
 }
 
-const Banner = ({ capa }: Props) => {
+const Banner = ({ capa, type, name }: Props) => {
     return (
-        <div>
-            <BannerCont src={capa} alt="" />
-        </div>
+        <BannerContainer>
+            <BannerImg src={capa} alt={name} />
+            <Tipo>{type}</Tipo>
+            <Name>{name}</Name>
+        </BannerContainer>
     )
 }
 

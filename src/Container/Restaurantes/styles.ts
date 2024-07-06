@@ -2,6 +2,10 @@ import styled from "styled-components";
 import variaveis from "../../Styles/variaveis";
 import closeIcon from "../../../public/images/close.png"
 
+export const ProductList = styled.ul`
+    align-items: center;
+`
+
 export const ProductCard = styled.div`
     width: 320px;
     height: 340px;

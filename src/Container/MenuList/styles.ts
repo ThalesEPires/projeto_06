@@ -7,4 +7,5 @@ export const MenuList = styled.ul`
     max-width: 1024px;
     width: 100%;
     margin: 56px auto 120px;
+    align-items: center;
 `
