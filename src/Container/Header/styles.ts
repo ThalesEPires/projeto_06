@@ -8,13 +8,14 @@ export const HeaderBar = styled.div`
     .header-container {
         display: flex;
         height: 186px;
-        width: 1024px;
+        max-width: 1024px;
+        width: 100%;
         justify-content: space-between;
         margin: 0 auto;
     }
 
     h4 {
-        margin: auto;
+        margin: auto 0;
         color: ${variaveis.rose};
         font-weight: 900;
         font-size: 18px;
