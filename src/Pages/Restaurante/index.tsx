@@ -1,7 +1,7 @@
 import Header from "../../Container/Header"
 import MenuList from "../../Container/MenuList"
 import { useEffect, useState } from "react"
-import { Api, Cardapio } from "../../types"
+import { Cardapio } from "../../types"
 import { useParams } from "react-router-dom"
 import BannerList from "../../Container/BannerList"
 
@@ -13,8 +13,8 @@ const Restaurantes = () => {
     const { id } = useParams() as ProductParams
     const [menu, setMenu] = useState<Cardapio[]>([])
     const [capa, setCapa] = useState<string>("")
-    const [type, setType] = useState<Api[]>([])
-    const [name, setName] = useState<Api[]>([])
+    const [type, setType] =  useState<string>("")
+    const [name, setName] =  useState<string>("")
 
     useEffect(() => {
         fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)

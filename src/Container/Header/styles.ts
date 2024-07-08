@@ -3,10 +3,15 @@ import variaveis from "../../Styles/variaveis"
 import { Imagem } from "../../Styles"
 
 export const HeaderBar = styled.div`
-    display: flex;
-    height: 186px;
-    justify-content: space-between;
     background-image: url(../../../images/background.png);
+
+    .header-container {
+        display: flex;
+        height: 186px;
+        width: 1024px;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
 
     h4 {
         margin: auto;

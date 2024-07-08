@@ -6,5 +6,7 @@ export const ItensList = styled.ul`
     gap: 80px;
     width: 1024px;
     height: 1290px;
-    margin: 80px 170px 120px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 170px;
 `
