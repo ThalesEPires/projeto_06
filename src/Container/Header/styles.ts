@@ -25,6 +25,16 @@ export const HeaderBar = styled.div`
     }
 `
 
+export const CartButton = styled.a`
+    margin: auto 0;
+    color: ${variaveis.rose};
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    line-height: 21px;
+    height: 20px;
+`
+
 export const Logo = styled(Imagem)`
     margin: auto;
 `

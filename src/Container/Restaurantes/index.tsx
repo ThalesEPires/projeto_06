@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 import * as S from "./styles"
 import { ProductList } from "./styles"
+import { add, open } from "../../Store/reducers/cart"
+import { useDispatch } from "react-redux"
 
 type Props = {
     id: number
@@ -15,13 +16,15 @@ type Props = {
 
 
 const Restaurante = ({ image, price, name, description, portion, id }: Props) => {
-    const navigate = useNavigate()
+
+    const dispatch = useDispatch()
+
+    const addToCart = () => {
+        dispatch(add())
+        dispatch(open())
+    }
     
     const [modalEstaAberto, setModalEstaAberto] = useState(false)
-    
-    const goToCart = () => {
-        navigate('/cart')
-    }
 
     const getDescription = (text: string) => {
         if (text.length > 260) {
@@ -48,7 +51,7 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
                         <h4>{name}</h4>
                         <p>{description}<br /> <br /> <br /></p>
                         <p>{`Serve: ${portion}`}</p>
-                        <button type="button" onClick={goToCart}>{`Adicionar ao carrinho  - R$${price}`}</button>
+                        <button type="button" onClick={addToCart}>{`Adicionar ao carrinho  - R$${price}`}</button>
                     </div>
                 </S.ModalContent>
                 <div className="overlay" onClick={() => setModalEstaAberto(false)}></div>

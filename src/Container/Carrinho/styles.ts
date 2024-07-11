@@ -19,10 +19,10 @@ export const CartContainer = styled.aside`
     height: 100%;
     background-color: ${variaveis.rose};
     z-index: 1;
-    display: block;
+    display: none;
 
-    &.invisible {
-        display: none;
+    &.is-open {
+        display: block;
     }
 `
 

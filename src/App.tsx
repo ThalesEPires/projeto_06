@@ -1,3 +1,4 @@
+import { Provider } from "react-redux"
 import { BrowserRouter } from "react-router-dom"
 
 import { EstiloGlobal, MainContainer } from "./Styles"
@@ -5,7 +6,6 @@ import { EstiloGlobal, MainContainer } from "./Styles"
 import { store } from "./Store"
 import Footer from "./Container/Footer"
 import Rotas from "./routes"
-import { Provider } from "react-redux"
 
 
 
