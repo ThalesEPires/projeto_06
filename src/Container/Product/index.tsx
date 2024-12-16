@@ -1,38 +1,38 @@
 import { Button, Card, Descricao, Destaque, Image, Notas, Tag, Title } from "./styles"
 
-import estrela from "../../../public/images/estrela.png"
+import estrela from "../Images/images/estrela.png"
 
 type Props = {
     id: number
-    title: string
-    highlighted?: boolean;
-    type: string;
-    note: number;
-    description: string;
-    cover: string;
+    titulo: string
+    destacado?: boolean;
+    tipo: string;
+    avaliacao: number;
+    descricao: string;
+    capa: string;
 }
 
-const Product = ({ id, title, highlighted, type, note, description, cover }: Props) => {
+const Product = ({ id, titulo, destacado, tipo, avaliacao, descricao, capa }: Props) => {
     return (
         <Card
         key={id} 
-        title={`Clique aqui para saber mais detalhes do restaurante: ${title}`}
+        title={`Clique aqui para saber mais detalhes do restaurante: ${titulo}`}
         to={`/restaurantes/${id}`}
         >
-            <Image src={cover} alt={title} />
-            {highlighted === true && (
-                <Destaque>{highlighted === true && 'Destaque do dia'}</Destaque>
+            <Image src={capa} alt={titulo} />
+            {destacado === true && (
+                <Destaque>{destacado === true && 'Destaque do dia'}</Destaque>
             )}
-            <Tag>{type}</Tag>
+            <Tag>{tipo}</Tag>
             <div>
-                <Title>{title}
+                <Title>{titulo}
                     <Notas>
-                        {note}
+                        {avaliacao}
                         <img src={estrela} />
                     </Notas>
                 </Title>
             </div>
-            <Descricao>{description}</Descricao>
+            <Descricao>{descricao}</Descricao>
             <Button>Saiba mais</Button>
         </Card>
     )

@@ -14,9 +14,9 @@ const CartList = ({ cart }: Props) => {
                     <li key={cart.id}>
                         <Carrinho
                             id={cart.id}
-                            nome={cart.nome}
-                            imagem={cart.foto}
+                            foto={cart.foto}
                             preco={cart.preco}
+                            nome={cart.nome}
                         />
                     </li>
                 ))}

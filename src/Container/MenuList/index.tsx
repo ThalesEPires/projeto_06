@@ -14,11 +14,11 @@ const MenuList = ({ produtos }: Props) => {
                     <li key={produtos.id}>
                         <Restaurante
                             id={produtos.id}
-                            name={produtos.nome}
-                            description={produtos.descricao}
-                            image={produtos.foto}
-                            portion={produtos.porcao}
-                            price={produtos.preco}
+                            nome={produtos.nome}
+                            descricao={produtos.descricao}
+                            foto={produtos.foto}
+                            porcao={produtos.porcao}
+                            preco={produtos.preco}
                         />
                     </li>
                 ))}

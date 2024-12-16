@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import variaveis from "../../Styles/variaveis";
-import closeIcon from "../../../public/images/close.png"
+import closeIcon from "../Images/images/close.png"
 
 export const ProductList = styled.ul`
     align-items: center;

@@ -1,4 +1,4 @@
-import logo from '../../../public/images/logo.png'
+import logo from '../Images/images/logo.png'
 import { MainContainer } from '../../Styles'
 import * as S from './styles'
 import { Imagem } from '../../Styles'

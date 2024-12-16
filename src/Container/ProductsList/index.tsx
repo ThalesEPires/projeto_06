@@ -14,12 +14,12 @@ const ProductsList = ({ product }: Props) => {
                     <li key={product.id}>
                         <Product 
                             id={product.id}
-                            title={product.titulo}
-                            highlighted={product.destacado}
-                            description={product.descricao}
-                            type={product.tipo}
-                            cover={product.capa}
-                            note={product.avaliacao}
+                            titulo={product.titulo}
+                            destacado={product.destacado}
+                            descricao={product.descricao}
+                            tipo={product.tipo}
+                            capa={product.capa}
+                            avaliacao={product.avaliacao}
                         />
                     </li>
                 ))}

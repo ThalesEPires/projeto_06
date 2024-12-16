@@ -1,5 +1,5 @@
 import Restaurante from "../../Pages/Restaurante"
-import lixeira from "../../../public/images/lixeira.png"
+import lixeira from "../Images/images/lixeira.png"
 import { Img, Overlay, CartItem, Infos, Title, Price, Lixeira, Valor, Value, Button, CartContainer } from "./styles"
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
@@ -8,13 +8,13 @@ import { RootReducer } from "../../Store"
 import { close } from "../../Store/reducers/cart"
 
 type Props = {
-    imagem: string
+    id: number
+    foto: string
     nome: string
     preco: number
-    id: number
 }
 
-const Carrinho = ({ imagem, nome, preco, id}: Props) => {
+const Carrinho = ({ id, foto, nome, preco}: Props) => {
     const navigate = useNavigate()
 
     const { isOpen } = useSelector((state: RootReducer) => state.cart)
@@ -36,11 +36,11 @@ const Carrinho = ({ imagem, nome, preco, id}: Props) => {
                 <Overlay onClick={closeCart}/>
                     <ul>
                         <CartItem key={id}>
-                            <Img src={imagem} />
+                            <Img src={foto} />
                             <Infos>
                                 <Title>{nome}</Title>
                                 <Price>{preco}</Price>
-                                <Lixeira src={lixeira} />
+                                <Lixeira src={lixeira} /> 
                             </Infos>
                         </CartItem>
                     </ul>

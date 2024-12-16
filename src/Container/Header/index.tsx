@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { open } from "../../Store/reducers/cart"
 
 import { CartButton, HeaderBar, Logo } from "./styles"
-import logo from "../../../public/images/logo.png"
+import logo from "../Images/images/logo.png"
 import { RootReducer } from "../../Store"
 
 const Header = () => {

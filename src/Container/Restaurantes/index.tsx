@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 import * as S from "./styles"
 import { ProductList } from "./styles"
@@ -7,21 +8,22 @@ import { useDispatch } from "react-redux"
 
 type Props = {
     id: number
-    image: string
-    price: number
-    name: string
-    description: string
-    portion: string
+    foto: string
+    preco: number  
+    nome: string
+    descricao: string
+    porcao: string
 }
 
 
-const Restaurante = ({ image, price, name, description, portion, id }: Props) => {
+const Restaurante = ({ id, foto, preco, nome, descricao, porcao }: Props) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const addToCart = () => {
-        dispatch(add())
-        dispatch(open())
+        dispatch(add({ id: id, foto: foto, preco: preco, nome: nome, descricao: descricao, porcao: porcao}))
+        navigate('/cart')
     }
     
     const [modalEstaAberto, setModalEstaAberto] = useState(false)
@@ -37,21 +39,21 @@ const Restaurante = ({ image, price, name, description, portion, id }: Props) =>
         <>
             <ProductList>
                 <S.ProductCard key={id} onClick={() => setModalEstaAberto(true)}>
-                    <img src={image} alt={name}  />
-                    <h5>{name}</h5>
-                    <p>{getDescription(description)}</p>
+                    <img src={foto} alt={nome}  />
+                    <h5>{nome}</h5>
+                    <p>{getDescription(descricao)}</p>
                     <button type="button">Adicionar ao carrinho</button>
                 </S.ProductCard> 
             </ProductList> 
             <S.Modal className={modalEstaAberto ? 'is-visible' : ''}>
                 <S.ModalContent className="container">
-                    <img src={image} alt={name} />
+                    <img src={foto} alt={nome} />
                     <button className="close-icon" type="button" onClick={() => setModalEstaAberto(false)}/>
                     <div>
-                        <h4>{name}</h4>
-                        <p>{description}<br /> <br /> <br /></p>
-                        <p>{`Serve: ${portion}`}</p>
-                        <button type="button" onClick={addToCart}>{`Adicionar ao carrinho  - R$${price}`}</button>
+                        <h4>{nome}</h4>
+                        <p>{descricao}<br /> <br /> <br /></p>
+                        <p>{`Serve: ${porcao}`}</p>
+                        <button type="button" onClick={addToCart}>{`Adicionar ao carrinho  - R$${preco}`}</button>
                     </div>
                 </S.ModalContent>
                 <div className="overlay" onClick={() => setModalEstaAberto(false)}></div>

@@ -16,10 +16,10 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         open: (state) => {
-            state.isOpen = true
+            state.isOpen = false
         },
         close: (state) => {
-            state.isOpen = false
+            state.isOpen = true
         },
         add: (state, action: PayloadAction<Cardapio>) => {
             state.items.push(action.payload)

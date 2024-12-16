@@ -14,7 +14,7 @@ export declare type Cardapio = {
     foto: string
     preco: number
     nome: string
-    descricao: string
-    porcao: string
+    descricao?: string
+    porcao?: string
 }
 
